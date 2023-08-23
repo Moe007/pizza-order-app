@@ -8,20 +8,11 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+@layer components{
+  .button {
+      @apply bg-indigo-800 text-slate-100 rounded-xl text-center px-6 py-0.5 sm:px-8 sm:py-1 md:px-10 md:py-2 shadow-lg active:shadow-inner transition-all uppercase text-base sm:text-lg lg:text-xl 2xl:text-2xl tracking-wide xs:tracking-wider sm:tracking-wide md:tracking-wider hover:bg-opacity-90;
+    }
+    
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
